@@ -2,7 +2,10 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class AuthController {
 
-    protected register(context: HttpContextContract){
-        
+    protected async register({request, response}: HttpContextContract){
+
+        return response.json({
+            data : request
+        })
     }
 }
